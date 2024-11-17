@@ -6,6 +6,7 @@ Mapped entity via Mapstruct.
 API documented via Swagger.
 
 ## Run project
+Before the first launch you may need to change ddl-auto property in application.yaml to "create" _// will be fixed with liquibase migrations soon_
 ```
 git clone https://github.com/yanmayak/RomashkaCo.git
 mvn clear
