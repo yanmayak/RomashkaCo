@@ -1,14 +1,10 @@
 package ru.yanmayak.romaskaco.repository;
 
-import ru.yanmayak.romaskaco.dto.ProductDto;
-
-import java.util.Collection;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ru.yanmayak.romaskaco.entity.Product;
 import java.util.UUID;
 
-public interface ProductRepository {
-    Collection<ProductDto> getAll();
-    ProductDto getById(UUID id);
-    ProductDto create(ProductDto productDto);
-    ProductDto update(UUID id, ProductDto productDto);
-    void delete(UUID id);
+@Repository
+public interface ProductRepository extends JpaRepository<Product, UUID> {
 }
